@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Fitness Videos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Site header with title -->
+
+    <header>
+        <h1>FitZone Hub</h1>
+        <p>Free workout videos for everyone</p>
+    </header>
+    
+    <!-- Navigation links -->
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#videos">Videos</a>
+        <a href="#about">About</a>
+    </nav>
+    
+    <!-- Banner showing site is under development -->
+
+    <div class="dev-banner">
+    ⚠️ Under Development — Currently showing 6 sample videos. Full content coming soon.
+</div>
+
+    <!-- Home section with welcome message -->
+
+    <div class="container" id="home">
+        <h2 class="section-title">Welcome to My Fitness Site</h2>
+        <p class="home-text">
+            This is my personal project where I share free workout videos. 
+            I started this because I wanted to help people who can't afford gym memberships.
+            All videos are free to watch!
+        </p>
+    </div>
+    
+    <!-- Videos section with filter buttons and grid -->
+
+    <div class="container" id="videos">
+        <h2 class="section-title">Workout Videos</h2>
+        
+        <!-- Filter buttons to sort videos by category -->
+
+        <div class="category-filter">
+            <button class="active" onclick="filterVideos('all', event)">All</button>
+            <button onclick="filterVideos('chest', event)">Chest</button>
+            <button onclick="filterVideos('back', event)">Back</button>
+            <button onclick="filterVideos('legs', event)">Legs</button>
+            <button onclick="filterVideos('abs', event)">Abs</button>
+        </div>
+
+        <!-- Where videos get displayed -->
+
+        <div class="video-grid" id="videoGrid">
+        </div>
+    </div>
+    
+    <!-- Main features container -->
+
+    <div class = "main-container">
+
+     <!-- BMI Calculator section -->
+
+     <section id="bmi">
+  <h2>BMI Calculator</h2>
+  <input type="number" id="weight" placeholder="Enter weight (kg)">
+  <input type="number" id="height" placeholder="Enter height (cm)">
+  <button onclick="calculateBMI()">Calculate</button>
+  <p id="result"></p>
+</section>
+
+<!-- Workout Plan Generator section -->
+
+<div class="workout-container">
+    <h2>Workout Plan Generator</h2>
+    <label for="goal">Choose Workout Type:</label>
+<select id="goal" class="dropdown">
+    <option value="">-- Select Workout Type --</option>
+    <option value="beginner">Beginner</option>
+    <option value="intermediate">Intermediate</option>
+    <option value="advanced">Advanced</option>
+</select>
+    <button onclick="generateWorkout()">Generate Plan</button>
+    <div id="workoutResult"></div>
+</div>
+</div>
+
+    <!-- About section with my info -->
+
+    <div class="container" id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-box">
+            <p>Hi! I'm a student who loves fitness.</p>
+            <p>I created this website as a project for my university. 
+            I believe everyone should have access to fitness training regardless of their budget.</p>
+            <p>This site has free workout videos that you can do at home without any equipment.</p>
+            <p><strong>University:</strong> Chitkara University</p>
+            <p><strong>Roll No:</strong> 2511981266</p>
+        </div>
+    </div>
+  
+    <!-- Footer at bottom -->
+
+    <footer>
+        <p>&copy; 2025 My Fitness Videos. All rights reserved.</p>
+        <p>Made By VIRANSH GAUTAM.</p>
+    </footer>
+    
+    <!-- Load JavaScript file at the end -->
+
+    <script src="script.js"></script>
+</body>
+</html>
