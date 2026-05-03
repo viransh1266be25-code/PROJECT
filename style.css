@@ -1,0 +1,247 @@
+/* Basic reset - gets rid of default browser spacing */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Main body styles */
+body{
+    font-family: Arial, sans-serif;
+    background:#121212;
+    color:white;
+}
+/* Header at the top */
+header{
+    background:#2d2d2d;
+    padding:20px;
+    text-align:center;
+}
+header h1{
+    color:#4CAF50;
+    font-size:28px;
+}
+/* Navigation menu */
+nav{
+    background:#333;
+    padding:10px;
+    text-align:center;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-size:16px;
+}
+nav a:hover{
+    color:#4CAF50;
+}
+/* Main content container */
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+/* Section titles */
+.section-title{
+    text-align:center;
+    font-size:24px;
+    margin:25px 0;
+    padding-bottom:8px;
+    border-bottom:2px solid #4CAF50;
+}
+.home-text{
+    text-align:center;
+    color:#aaa;
+    margin-bottom:25px;
+}
+/* Video grid - makes cards sit next to each other */
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+/* Individual video card */
+.video-card{
+    background:#2d2d2d;
+    border-radius:8px;
+    overflow:hidden;
+}
+.video-card:hover{
+    transform:scale(1.02);
+    transition:0.3s;
+}
+/* Thumbnail area - holds the image */
+.video-thumbnail{
+    height:160px;
+    background:#444;
+    display:block;
+    position:relative;
+}
+.video-thumbnail img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+/* Play button icon on thumbnails */
+.play-icon{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:40px;
+    color:white;
+    opacity:0.8;
+    text-shadow:0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Video info below thumbnail */
+.video-info{
+    padding:15px;
+}
+.video-title{
+    font-size:16px;
+    margin-bottom:8px;
+}
+.video-desc{
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:10px;
+}
+/* Watch button styling */
+.watch-btn{
+    background:#4CAF50;
+    color:white;
+    text-decoration:none;
+    padding:8px 14px;
+    border-radius:4px;
+    display:inline-block;
+}
+.watch-btn:hover{
+    background:#45a049;
+}
+button{
+    padding:10px;
+    cursor:pointer;
+    border:none;
+    border-radius:4px;
+}
+/* Filter buttons container */
+.category-filter{
+    text-align:center;
+    margin:20px 0;
+}
+.category-filter button{
+    background:#444;
+    color:white;
+    margin:5px;
+}
+.category-filter button:hover{
+    background:#4CAF50;
+}
+.category-filter .active{
+    background:#4CAF50;
+}
+/* Sections like BMI calculator */
+section{
+    margin:20px 0;
+    padding:20px;
+    background:#1e1e1e;
+    border-radius:10px;
+}
+
+/* Container for the two main features */
+.main-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+/* About section box */
+.about-box{
+    background:#2d2d2d;
+    padding:20px;
+    border-radius:8px;
+}
+.about-box p{
+    margin-bottom:12px;
+}
+#bmi,
+#plan,
+.workout-container{
+    width:65%;
+    text-align:center;
+}
+#bmi input{
+    width:35%;
+    height:35px;
+    padding:8px;
+    font-size:16px;
+    border:none;
+    border-radius:4px;
+    outline:none;
+    background:#2a2a2a;
+    color:white;
+    margin:5px;
+}
+/* Input and select fields */
+input,
+select{
+    background:#2a2a2a;
+    color:white;
+    border:none;
+    padding:8px;
+    border-radius:4px;
+}
+
+/* Workout section */
+.workout-container{
+    padding:20px;
+    margin:20px auto;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+.workout-container select,
+.workout-container button{
+    width:100%;
+    margin-top:10px;
+}
+#workoutResult ul{
+    list-style:none;
+    padding:0;
+    margin-top:10px;
+}
+/* Footer at bottom */
+footer{
+    background:#2d2d2d;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+/* Mobile responsiveness */
+@media(max-width:768px){
+
+    #bmi,
+    #plan,
+    .workout-container{
+        width:95%;
+    }
+
+    #bmi input{
+        width:90%;
+    }
+
+    nav a{
+        display:block;
+        margin:8px 0;
+    }
+}
+.dev-banner {
+    background: #ff9800;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
